@@ -14,8 +14,8 @@ def status():
 
 
 @app_views.route('/stats', methods=['GET'], strict_slashes=False)
-def numbofobj():
-    """NUMOFOBJ retrieves the number of each objects by type."""
+def count():
+    """Count retrieves the number of each objects by type."""
     stats = {}
 
     for cls_name in db_storage.classes:
