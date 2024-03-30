@@ -6,14 +6,14 @@ from models import storage
 from models.engine import db_storage
 
 
-@app_views.route('/status')
+@app_views.route('/status', methods=['GET'], strict_slashes=False)
 def status():
     """Statu method for the app statu."""
     statu = {"status": "OK"}
     return jsonify(statu)
 
 
-@app_views.route('/stats')
+@app_views.route('/stats', methods=['GET'], strict_slashes=False)
 def numbofobj():
     """NUMOFOBJ retrieves the number of each objects by type."""
     stats = {}
